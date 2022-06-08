@@ -14,8 +14,10 @@ public class T implements Runnable{
         // StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
         // System.out.println(Thread.currentThread().getName() + PixelConverter.Argb.instance);
 
-        ContainerSingleton.putInstance("object", new Object());
-        Object object = ContainerSingleton.getInstance("object");
-        System.out.println(object);
+        // ContainerSingleton.putInstance("object", new Object());
+        // Object object = ContainerSingleton.getInstance("object");
+
+        ThreadLocalInstance instance = ThreadLocalInstance.getInstance();
+        System.out.println(Thread.currentThread().getName() + PixelConverter.Argb.instance);
     }
 }
