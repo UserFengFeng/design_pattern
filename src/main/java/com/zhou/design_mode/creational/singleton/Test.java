@@ -54,19 +54,15 @@ public class Test {
         // constructor.setAccessible(true);
         // EnumInstance o = (EnumInstance) constructor.newInstance();
 
-
         // Constructor constructor = objectClass.getDeclaredConstructor();
         // 因为构造器是private 设置权限放开
         // constructor.setAccessible(true);
-        //
+
         // StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
         // StaticInnerClassSingleton newInstance = (StaticInnerClassSingleton) constructor.newInstance();
 
-
         // LazyDoubleCheckSingleton instance = LazyDoubleCheckSingleton.getInstance();
         // LazyDoubleCheckSingleton newInstance = (LazyDoubleCheckSingleton) constructor.newInstance();
-
-
 
         // HungrySingleton instance = HungrySingleton.getInstance();
         // HungrySingleton newInstance = (HungrySingleton) constructor.newInstance();
