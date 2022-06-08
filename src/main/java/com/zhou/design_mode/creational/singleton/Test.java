@@ -19,13 +19,18 @@ public class Test {
         // thread.start();
         // thread2.start();
         // HungrySingleton instance = HungrySingleton.getInstance();
-        // ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("singleton_file"));
-        // outputStream.writeObject(instance);
-        //
-        // ObjectInputStream singleton_file = new ObjectInputStream(new FileInputStream("singleton_file"));
-        // HungrySingleton inputHungrysing = (HungrySingleton) singleton_file.readObject();
-        // System.out.println(instance);
-        // System.out.println(inputHungrysing);
+
+        EnumInstance instance = EnumInstance.getInstance();
+        instance.setData(new Object());
+
+        ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("singleton_file"));
+        outputStream.writeObject(instance);
+
+        ObjectInputStream singleton_file = new ObjectInputStream(new FileInputStream("singleton_file"));
+        EnumInstance inputHungrysing = (EnumInstance) singleton_file.readObject();
+        System.out.println(instance.getData());
+        System.out.println(inputHungrysing.getData());
+        System.out.println(instance.getData() == inputHungrysing.getData());
 
         /**
          * TODO
@@ -41,15 +46,20 @@ public class Test {
         // 反射攻击解决方案及原理分析 主要关注私有构造器
         // Class objectClass = HungrySingleton.class;
         // Class objectClass = LazyDoubleCheckSingleton.class;
-        Class objectClass = StaticInnerClassSingleton.class;
+        // Class objectClass = StaticInnerClassSingleton.class;
+
+        // Class enumInstanceClass = EnumInstance.class;
+        // Constructor constructor = enumInstanceClass.getDeclaredConstructor();
+        // constructor.setAccessible(true);
+        // EnumInstance o = (EnumInstance) constructor.newInstance();
 
 
-        Constructor constructor = objectClass.getDeclaredConstructor();
+        // Constructor constructor = objectClass.getDeclaredConstructor();
         // 因为构造器是private 设置权限放开
-        constructor.setAccessible(true);
-
-        StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
-        StaticInnerClassSingleton newInstance = (StaticInnerClassSingleton) constructor.newInstance();
+        // constructor.setAccessible(true);
+        //
+        // StaticInnerClassSingleton instance = StaticInnerClassSingleton.getInstance();
+        // StaticInnerClassSingleton newInstance = (StaticInnerClassSingleton) constructor.newInstance();
 
 
         // LazyDoubleCheckSingleton instance = LazyDoubleCheckSingleton.getInstance();
@@ -60,8 +70,12 @@ public class Test {
         // HungrySingleton instance = HungrySingleton.getInstance();
         // HungrySingleton newInstance = (HungrySingleton) constructor.newInstance();
 
-        System.out.println(instance);
-        System.out.println(newInstance);
-        System.out.println(instance == newInstance);
+        // System.out.println(instance);
+        // System.out.println(newInstance);
+        // System.out.println(instance == newInstance);
+
+        EnumInstance instance1 = EnumInstance.getInstance();
+        instance1.printTest();
+
     }
 }
