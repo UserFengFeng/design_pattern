@@ -14,23 +14,23 @@ public class Test {
     public static void main(String[] args) throws Exception {
         // LazySingleton instance = LazySingleton.getInstance();
         // 多线程时会有线程不安全问题（创建了多个对象）
-        // Thread thread = new Thread(new T());
-        // Thread thread2 = new Thread(new T());
-        // thread.start();
-        // thread2.start();
+        Thread thread = new Thread(new T());
+        Thread thread2 = new Thread(new T());
+        thread.start();
+        thread2.start();
         // HungrySingleton instance = HungrySingleton.getInstance();
 
-        EnumInstance instance = EnumInstance.getInstance();
-        instance.setData(new Object());
-
-        ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("singleton_file"));
-        outputStream.writeObject(instance);
-
-        ObjectInputStream singleton_file = new ObjectInputStream(new FileInputStream("singleton_file"));
-        EnumInstance inputHungrysing = (EnumInstance) singleton_file.readObject();
-        System.out.println(instance.getData());
-        System.out.println(inputHungrysing.getData());
-        System.out.println(instance.getData() == inputHungrysing.getData());
+        // EnumInstance instance = EnumInstance.getInstance();
+        // instance.setData(new Object());
+        //
+        // ObjectOutputStream outputStream = new ObjectOutputStream(new FileOutputStream("singleton_file"));
+        // outputStream.writeObject(instance);
+        //
+        // ObjectInputStream singleton_file = new ObjectInputStream(new FileInputStream("singleton_file"));
+        // EnumInstance inputHungrysing = (EnumInstance) singleton_file.readObject();
+        // System.out.println(instance.getData());
+        // System.out.println(inputHungrysing.getData());
+        // System.out.println(instance.getData() == inputHungrysing.getData());
 
         /**
          * TODO
@@ -74,8 +74,8 @@ public class Test {
         // System.out.println(newInstance);
         // System.out.println(instance == newInstance);
 
-        EnumInstance instance1 = EnumInstance.getInstance();
-        instance1.printTest();
+        // EnumInstance instance1 = EnumInstance.getInstance();
+        // instance1.printTest();
 
     }
 }

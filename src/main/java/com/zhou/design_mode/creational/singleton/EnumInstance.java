@@ -1,5 +1,8 @@
 package com.zhou.design_mode.creational.singleton;
 
+/**
+ * 枚举单例
+ * */
 public enum EnumInstance {
     INSTANCE {
         protected void printTest(){
