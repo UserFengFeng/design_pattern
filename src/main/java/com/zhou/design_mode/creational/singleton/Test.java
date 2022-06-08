@@ -18,6 +18,7 @@ public class Test {
         Thread thread2 = new Thread(new T());
         thread.start();
         thread2.start();
+
         // HungrySingleton instance = HungrySingleton.getInstance();
 
         // EnumInstance instance = EnumInstance.getInstance();
