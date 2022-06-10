@@ -17,6 +17,7 @@ package com.zhou.design_mode.structural.facade;
  *      不符合开闭原则
  *
  * 应用层之和外观类做交互，不和具体子系统进行交互
+ * 白话文理解：看似调用的GiftExchangeServer这个类的方法  其实里面调用的是其他类的方法
  * */
 public class Test {
     public static void main(String[] args) {
