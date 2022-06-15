@@ -1,5 +1,8 @@
 package com.zhou.design_mode.structural.decorator.v1;
 
+/**
+* 装饰者模式
+* */
 public class Test {
     public static void main(String[] args) {
         Battercake battercake = new Battercake();

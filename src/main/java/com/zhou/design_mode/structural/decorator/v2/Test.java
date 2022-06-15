@@ -1,5 +1,8 @@
 package com.zhou.design_mode.structural.decorator.v2;
 
+/**
+ * 装饰者模式
+ * */
 public class Test {
     public static void main(String[] args) {
         /*

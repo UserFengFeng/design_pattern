@@ -1,7 +1,7 @@
 package com.zhou.design_mode.structural.adapter.objectadapter;
 
 /*
-* todo 类实现
+* todo 对象实现
 * */
 public class Test {
     public static void main(String[] args) {
