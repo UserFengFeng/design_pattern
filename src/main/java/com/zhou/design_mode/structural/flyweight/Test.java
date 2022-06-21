@@ -11,10 +11,14 @@ package com.zhou.design_mode.structural.flyweight;
  *      减少内存之外的其他资源占用（比如时间）
  * 缺点：关注内/外部状态、关注线程安全问题
  *      使系统、程序的逻辑复杂化
- * 扩展：内部状态、外部转态
+ * 扩展：内部状态、外部状态态
+ *      内部状态：就是一个String xx = "xxx公司"工厂中的常量，不管你是哪个部门进行汇报都属于这个公司，属于共享信息。
+ *      外部状态：就是我们的department，属于不可共享信息,简单粗暴理解就是只是一个简单工厂中的标志位。
  *
  * demo: 到年终，每个部门进行汇总报告
  * 源码解析应用：Integer valueOf()
+ *
+ *
  * */
 public class Test {
     private static final String departments[] = {"RD", "QA", "PM"};
