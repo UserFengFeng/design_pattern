@@ -14,7 +14,7 @@ package com.zhou.design_mode.structural.flyweight;
  * 扩展：内部状态、外部转态
  *
  * demo: 到年终，每个部门进行汇总报告
- *
+ * 源码解析应用：Integer valueOf()
  * */
 public class Test {
     private static final String departments[] = {"RD", "QA", "PM"};
