@@ -2,7 +2,7 @@ package com.zhou.design_mode.structural.bridge;
 
 // 活期存款
 public class SavingAccout implements Account{
-    public Account openAccout() {
+    public Account openAccount() {
         System.out.println("打开活期账号");
         return new SavingAccout();
     }

@@ -18,9 +18,28 @@ package com.zhou.design_mode.structural.bridge;
  *
  * 相关设计模式：桥接模式+组合模式
  *             桥接模式+适配器模式
+ *
+ * demo场景：用不同的账号打开某个银行账户
+ *         银行：中国农业银行 工商银行
+ *         账号：活期账号、定期账号
+ *
  * */
 public class Test {
     public static void main(String[] args) {
+        Bank bank = new ICBCBank(new DepositAccount());
+        Account account = bank.openAccount();
+        account.showAccountType();
+
+        Bank abcBank2 = new ICBCBank(new SavingAccout());
+        Account account2 = abcBank2.openAccount();
+        account2.showAccountType();
+
+        Bank abcBank = new ABCBank(new SavingAccout());
+        Account account1 = abcBank.openAccount();
+        account1.showAccountType();
+
+
+
 
     }
 }
